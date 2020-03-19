@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  background-image: url(../img/nav.jpg);
+  background-image: url(img/nav.jpg);
   background-attachment: fixed;
   background-size: cover;
   color: red;
@@ -72,7 +72,7 @@ header p {
 }
 
 nav {
-  background-image: url(../img/space.jpg);
+  background-image: url(img/space.jpg);
   text-align: right;
   padding: 20px;
   background-color: white;
