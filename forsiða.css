@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  background-image: url(../img/bakgrunnur.jpg);
+  background-image: url(img/bakgrunnur.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -191,7 +191,7 @@ header p {
 
 nav {
   color: white;
-  background-image: url(../img/space.jpg);
+  background-image: url(img/space.jpg);
   text-align: right;
   padding: 30px;
   border: solid 2px;
@@ -219,7 +219,7 @@ nav img {
 
 article {
   color: white;
-  background-image: url(../img/space.jpg);
+  background-image: url(img/space.jpg);
 }
 
 article p {
