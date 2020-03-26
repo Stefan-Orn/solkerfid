@@ -1,8 +1,8 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot");
-  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff")
-      format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon")
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff")
+      format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon")
       format("svg");
   font-weight: normal;
   font-style: normal;
@@ -25,7 +25,7 @@
 
 body {
   margin: 0;
-  background-image: url(img/bakgrunnur.jpg);
+  background-image: url(../img/bakgrunnur.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -97,6 +97,21 @@ header {
   bottom: 2%;
 }
 
+#Raketta{
+  animation: flaug ease 15s;
+}
+
+@keyframes flaug{
+  from{
+    transform: rotateZ(15deg);
+  }
+  to{
+    transform: rotateZ(0deg);
+  }
+
+}
+
+
 #reikur{
   animation: reikur linear 5s infinite;
   transform-origin: center;
@@ -155,7 +170,7 @@ nav {
           border-radius: 5px;}
   img{width: 20px;
   }
-  background-image: url(img/space.jpg);
+  background-image: url(../img/space.jpg);
   text-align: right;
   padding: 30px;
   border: solid 2px;
@@ -173,7 +188,7 @@ article{
   a{
     text-decoration: none;
   }
-  background-image: url(img/space.jpg);
+  background-image: url(../img/space.jpg);
   img{
     width: 100%;
 
