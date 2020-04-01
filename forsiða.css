@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot");
-  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  background-image: url(img/bakgrunnur.jpg);
+  background-image: url(../img/bakgrunnur.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -34,12 +34,9 @@ body {
   grid-gap: 10px;
   -ms-grid-columns: 10% 20% 35% 20% 10%;
       grid-template-columns: 10% 20% 35% 20% 10%;
-  -ms-grid-rows: 10% auto 20%;
-      grid-template-rows: 10% auto 20%;
-      grid-template-areas: "logo navid navid navid bil"
- "logo haus haus article bil"
- "logo haus haus article bil"
- "footer footer footer footer footer";
+  -ms-grid-rows: 12% auto 20%;
+      grid-template-rows: 12% auto 20%;
+      grid-template-areas: "logo navid navid navid bil" "logo haus haus article bil" "logo haus haus article bil" "footer footer footer footer footer";
 }
 
 header {
@@ -194,6 +191,9 @@ header p {
 }
 
 .logo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
   grid-area: logo;
   border: solid 1px;
   color: blue;
@@ -217,19 +217,37 @@ header p {
 }
 
 nav {
+  padding: 15px;
   color: white;
-  background-image: url(img/space.jpg);
-  text-align: right;
-  padding: 30px;
+  background-image: url(../img/space.jpg);
   border: solid 2px;
   border-radius: 5px;
   background-color: white;
-  word-spacing: 50px;
+}
+
+nav img {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li ul li {
+  float: right;
+  word-spacing: 10px;
+}
+
+nav ul li ul li a {
+  display: block;
+  margin: 11px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 nav a {
   color: white;
-  font-size: 22px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -241,12 +259,14 @@ nav a:hover {
 }
 
 nav img {
-  width: 20px;
+  background-color: white;
+  border-radius: 5px;
+  width: 90px;
 }
 
 article {
   color: white;
-  background-image: url(img/space.jpg);
+  background-image: url(../img/space.jpg);
 }
 
 article p {
@@ -289,25 +309,123 @@ footer img {
 }
 
 nav {
-
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: navid;
 }
 
 header {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: haus;
 }
 
 article {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
   grid-area: article;
   border: solid 3px;
   border-radius: 5px;
 }
 
 footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: footer;
 }
 
 .bil {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
   grid-area: bil;
+}
+
+@media screen and (max-width: 40em) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    -ms-grid-columns: 8% 78%;
+        grid-template-columns: 8% 78%;
+    -ms-grid-rows: 9% auto auto 20%;
+        grid-template-rows: 9% auto auto 20%;
+        grid-template-areas: "logo navid" "logo haus" "logo article" "logo footer";
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav ul img:hover {
+    background-color: rgba(255, 255, 255, 0.589);
+  }
+  nav ul li:hover ul li {
+    display: block;
+  }
+  nav ul li {
+    float: right;
+    width: 80px;
+    height: 25px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.37);
+    text-align: center;
+    word-spacing: 15px;
+  }
+  nav ul li a {
+    font-size: 5px;
+    color: black;
+    display: block;
+  }
+  nav ul li a:hover {
+    background-color: white;
+  }
+  nav ul li ul li {
+    display: none;
+  }
+  nav ul li ul li a {
+    display: block;
+    margin: 0px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  nav ul li img {
+    display: block;
+    width: 50px;
+  }
+  nav article {
+    padding: 0px;
+    font-size: 20px;
+  }
+  nav footer {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 40em) and (max-width: 20em) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    -ms-grid-columns: 8% 30% 30% 20%;
+        grid-template-columns: 8% 30% 30% 20%;
+    -ms-grid-rows: 5% auto 20%;
+        grid-template-rows: 5% auto 20%;
+        grid-template-areas: "logo navid navid navid" "logo haus haus article" "logo haus haus article" "logo footer footer footer";
+  }
+  nav {
+    word-spacing: 15px;
+  }
+  nav a {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=forsiða.css.map */
