@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot");
-  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  background-image: url(img/bakgrunnur.jpg);
+  background-image: url(../img/bakgrunnur.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -34,12 +34,9 @@ body {
   grid-gap: 10px;
   -ms-grid-columns: 10% 20% 35% 20% 10%;
       grid-template-columns: 10% 20% 35% 20% 10%;
-  -ms-grid-rows: 12% auto 20%;
-      grid-template-rows: 12% auto 20%;
-      grid-template-areas: "logo navid navid navid bil"
- "logo haus haus article bil"
- "logo haus haus article bil"
- "footer footer footer footer footer";
+  -ms-grid-rows: 9% auto 20%;
+      grid-template-rows: 9% auto 20%;
+      grid-template-areas: "logo navid navid navid bil" "logo haus haus article bil" "logo haus haus article bil" "footer footer footer footer footer";
 }
 
 header {
@@ -220,56 +217,100 @@ header p {
 }
 
 nav {
-  padding: 15px;
-  color: white;
-  background-image: url(img/space.jpg);
-  border: solid 2px;
+  padding: 10px;
+  background-image: url(../img/space.jpg);
+  border: solid 2px white;
   border-radius: 5px;
   background-color: white;
-}
-
-nav img {
-  display: none;
 }
 
 nav ul {
   list-style: none;
 }
 
-nav ul li ul li {
+nav ul li {
   float: right;
-  word-spacing: 10px;
 }
 
-nav ul li ul li a {
+nav ul li a {
   display: block;
-  margin: 11px;
-  text-decoration: none;
-  font-size: 18px;
+  color: white;
+  padding: 11px;
+  font-size: 14px;
+}
+
+nav ul li a:hover:first-child {
+  background-color: white;
+  border-radius: 5px;
+  -webkit-animation: fade 2s forwards;
+          animation: fade 2s forwards;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    background-color: rgba(255, 255, 255, 0.199);
+    color: #7c7b7b;
+  }
+  20% {
+    background-color: rgba(255, 255, 255, 0.418);
+    color: #4d4c4c;
+  }
+  40% {
+    background-color: rgba(255, 255, 255, 0.63);
+    color: #353535;
+  }
+  60% {
+    background-color: rgba(255, 255, 255, 0.705);
+    color: #181818;
+  }
+  80% {
+    background-color: rgba(255, 255, 255, 0.877);
+    color: #0c0c0c;
+  }
+  100% {
+    background-color: white;
+    color: black;
+  }
+}
+
+@keyframes fade {
+  0% {
+    background-color: rgba(255, 255, 255, 0.199);
+    color: #7c7b7b;
+  }
+  20% {
+    background-color: rgba(255, 255, 255, 0.418);
+    color: #4d4c4c;
+  }
+  40% {
+    background-color: rgba(255, 255, 255, 0.63);
+    color: #353535;
+  }
+  60% {
+    background-color: rgba(255, 255, 255, 0.705);
+    color: #181818;
+  }
+  80% {
+    background-color: rgba(255, 255, 255, 0.877);
+    color: #0c0c0c;
+  }
+  100% {
+    background-color: white;
+    color: black;
+  }
 }
 
 nav a {
-  color: white;
-  font-size: 15px;
   text-decoration: none;
 }
 
-nav a:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(80%, rgba(255, 255, 255, 0)), color-stop(20%, #b6b676));
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 80%, #b6b676 20%);
-  padding: 4px;
-  border-radius: 5px;
-}
-
 nav img {
-  background-color: white;
-  border-radius: 5px;
-  width: 90px;
+  display: none;
 }
 
 article {
   color: white;
-  background-image: url(img/space.jpg);
+  background-image: url(../img/space.jpg);
 }
 
 article p {
@@ -356,67 +397,183 @@ footer {
     grid-gap: 10px;
     -ms-grid-columns: 8% 78%;
         grid-template-columns: 8% 78%;
-    -ms-grid-rows: 9% auto auto 20%;
-        grid-template-rows: 9% auto auto 20%;
-        grid-template-areas: "logo navid"
- "logo haus"
- "logo article"
- "logo footer";
+    -ms-grid-rows: 12% auto auto 20%;
+        grid-template-rows: 12% auto auto 20%;
+        grid-template-areas: "logo navid" "logo haus" "logo article" "logo footer";
   }
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  nav ul img:hover {
-    background-color: rgba(255, 255, 255, 0.589);
-  }
-  nav ul li:hover ul li {
-    display: block;
-  }
-  nav ul li {
-    float: right;
-    width: 80px;
-    height: 25px;
-    padding: 5px;
-    background-color: rgba(255, 255, 255, 0.37);
-    text-align: center;
+  nav {
     word-spacing: 15px;
   }
-  nav ul li a {
-    font-size: 5px;
-    color: black;
-    display: block;
+  nav .look {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
-  nav ul li a:hover {
-    background-color: white;
+  nav .navdrop {
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 5px;
+  }
+  nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  nav ul:first-child {
+    text-align: center;
+    -webkit-animation: anim 1s ease;
+            animation: anim 1s ease;
+  }
+  @-webkit-keyframes anim {
+    0% {
+      margin-left: 0px;
+    }
+    50% {
+      margin-left: 100px;
+    }
+    80% {
+      margin-right: -20px;
+    }
+    100% {
+      margin-right: 0px;
+    }
+  }
+  @keyframes anim {
+    0% {
+      margin-left: 0px;
+    }
+    50% {
+      margin-left: 100px;
+    }
+    80% {
+      margin-right: -20px;
+    }
+    100% {
+      margin-right: 0px;
+    }
+  }
+  nav ul img {
+    margin-left: 25px;
+    width: 80px;
+    height: 80px;
+  }
+  nav ul li {
+    float: none;
+    color: white;
+    text-align: center;
+  }
+  nav ul li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 12px;
+  }
+  nav ul li a:hover:first-child {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, white), color-stop(10%, yellow));
+    background-image: linear-gradient(white 90%, yellow 10%);
+    border-radius: 5px;
+    color: black;
+    -webkit-animation: anim4 1s forwards;
+            animation: anim4 1s forwards;
+  }
+  @-webkit-keyframes anim4 {
+    0% {
+      font-size: 12px;
+    }
+    20% {
+      font-size: 13px;
+    }
+    40% {
+      font-size: 14px;
+    }
+    60% {
+      font-size: 15px;
+    }
+    80% {
+      font-size: 14px;
+    }
+    90% {
+      font-size: 13px;
+    }
+    100% {
+      font-size: 12px;
+    }
+  }
+  @keyframes anim4 {
+    0% {
+      font-size: 12px;
+    }
+    20% {
+      font-size: 13px;
+    }
+    40% {
+      font-size: 14px;
+    }
+    60% {
+      font-size: 15px;
+    }
+    80% {
+      font-size: 14px;
+    }
+    90% {
+      font-size: 13px;
+    }
+    100% {
+      font-size: 12px;
+    }
   }
   nav ul li ul li {
     display: none;
   }
-  nav ul li ul li a {
+  nav ul li:hover:first-child ul li {
+    -webkit-animation: anim2 1s ease;
+            animation: anim2 1s ease;
     display: block;
-    margin: 0px;
-    text-decoration: none;
+  }
+  @-webkit-keyframes anim2 {
+    0% {
+      margin-left: 0px;
+    }
+    50% {
+      margin-left: 20px;
+    }
+    100% {
+      margin-right: 0px;
+    }
+  }
+  @keyframes anim2 {
+    0% {
+      margin-left: 0px;
+    }
+    50% {
+      margin-left: 20px;
+    }
+    100% {
+      margin-right: 0px;
+    }
+  }
+  nav a {
     font-size: 15px;
   }
-  nav ul li a {
-    font-size: 15px;
-  }
-  nav ul li img {
+  nav img {
     display: block;
     width: 50px;
   }
-  nav article {
+  article {
     padding: 0px;
     font-size: 20px;
   }
-  nav footer {
+  footer {
     margin-left: 20%;
   }
 }
 
-@media screen and (max-width: 40em) and (max-width: 20em) {
+@media screen and (max-width: 20em) {
   body {
     display: -ms-grid;
     display: grid;
@@ -425,10 +582,7 @@ footer {
         grid-template-columns: 8% 30% 30% 20%;
     -ms-grid-rows: 5% auto 20%;
         grid-template-rows: 5% auto 20%;
-        grid-template-areas: "logo navid navid navid"
- "logo haus haus article"
- "logo haus haus article"
- "logo footer footer footer";
+        grid-template-areas: "logo navid navid navid" "logo haus haus article" "logo haus haus article" "logo footer footer footer";
   }
   nav {
     word-spacing: 15px;
