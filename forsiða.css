@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  src: url("fonts/icomoon.eot");
+  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  background-image: url(../img/bakgrunnur.jpg);
+  background-image: url(img/bakgrunnur.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -36,7 +36,10 @@ body {
       grid-template-columns: 10% 20% 35% 20% 10%;
   -ms-grid-rows: 15% auto 20%;
       grid-template-rows: 15% auto 20%;
-      grid-template-areas: "logo navid navid navid bil" "logo haus haus article bil" "logo haus haus article bil" "footer footer footer footer footer";
+      grid-template-areas: "logo navid navid navid bil"
+ "logo haus haus article bil"
+ "logo haus haus article bil"
+ "footer footer footer footer footer";
 }
 
 header {
@@ -218,7 +221,7 @@ header p {
 
 nav {
   padding: 10px;
-  background-image: url(../img/space.jpg);
+  background-image: url(img/space.jpg);
   border: solid 2px white;
   border-radius: 5px;
 }
@@ -247,7 +250,7 @@ nav img {
 }
 
 article {
-  background-image: url(../img/space.jpg);
+  background-image: url(img/space.jpg);
   color: white;
 }
 
@@ -339,7 +342,10 @@ footer {
         grid-template-columns: 8% 78%;
     -ms-grid-rows: 12% auto auto 20%;
         grid-template-rows: 12% auto auto 20%;
-        grid-template-areas: "logo navid" "logo haus" "logo article" "logo footer";
+        grid-template-areas: "logo navid"
+ "logo haus"
+ "logo article"
+ "logo footer";
   }
   .dropbtn {
     z-index: 0;
