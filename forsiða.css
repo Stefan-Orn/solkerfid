@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot");
-  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  background-image: url(img/bakgrunnur.jpg);
+  background-image: url(../img/bakgrunnur.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -34,12 +34,9 @@ body {
   grid-gap: 10px;
   -ms-grid-columns: 10% 20% 35% 20% 10%;
       grid-template-columns: 10% 20% 35% 20% 10%;
-  -ms-grid-rows: 9% auto 20%;
-      grid-template-rows: 9% auto 20%;
-      grid-template-areas: "logo navid navid navid bil"
- "logo haus haus article bil"
- "logo haus haus article bil"
- "footer footer footer footer footer";
+  -ms-grid-rows: 15% auto 20%;
+      grid-template-rows: 15% auto 20%;
+      grid-template-areas: "logo navid navid navid bil" "logo haus haus article bil" "logo haus haus article bil" "footer footer footer footer footer";
 }
 
 header {
@@ -221,90 +218,28 @@ header p {
 
 nav {
   padding: 10px;
-  background-image: url(img/space.jpg);
+  background-image: url(../img/space.jpg);
   border: solid 2px white;
   border-radius: 5px;
-  background-color: white;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
-  float: right;
-}
-
-nav ul li a {
-  display: block;
-  color: white;
-  padding: 11px;
-  font-size: 14px;
-}
-
-nav ul li a:hover:first-child {
-  background-color: white;
-  border-radius: 5px;
-  -webkit-animation: fade 2s forwards;
-          animation: fade 2s forwards;
-}
-
-@-webkit-keyframes fade {
-  0% {
-    background-color: rgba(255, 255, 255, 0.199);
-    color: #7c7b7b;
-  }
-  20% {
-    background-color: rgba(255, 255, 255, 0.418);
-    color: #4d4c4c;
-  }
-  40% {
-    background-color: rgba(255, 255, 255, 0.63);
-    color: #353535;
-  }
-  60% {
-    background-color: rgba(255, 255, 255, 0.705);
-    color: #181818;
-  }
-  80% {
-    background-color: rgba(255, 255, 255, 0.877);
-    color: #0c0c0c;
-  }
-  100% {
-    background-color: white;
-    color: black;
-  }
-}
-
-@keyframes fade {
-  0% {
-    background-color: rgba(255, 255, 255, 0.199);
-    color: #7c7b7b;
-  }
-  20% {
-    background-color: rgba(255, 255, 255, 0.418);
-    color: #4d4c4c;
-  }
-  40% {
-    background-color: rgba(255, 255, 255, 0.63);
-    color: #353535;
-  }
-  60% {
-    background-color: rgba(255, 255, 255, 0.705);
-    color: #181818;
-  }
-  80% {
-    background-color: rgba(255, 255, 255, 0.877);
-    color: #0c0c0c;
-  }
-  100% {
-    background-color: white;
-    color: black;
-  }
 }
 
 nav a {
-  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgba(255, 255, 255, 0.329);
+  margin-top: 5%;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px;
+  color: white;
+  text-decoration: underline;
+  float: right;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
 }
 
 nav img {
@@ -312,11 +247,12 @@ nav img {
 }
 
 article {
+  background-image: url(../img/space.jpg);
   color: white;
-  background-image: url(img/space.jpg);
 }
 
 article p {
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   padding: 5px;
   color: white;
@@ -331,6 +267,7 @@ article img {
 }
 
 .hnappur {
+  font-family: 'Roboto Condensed', sans-serif;
   color: black;
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(grey));
   background-image: linear-gradient(white, grey);
@@ -402,171 +339,100 @@ footer {
         grid-template-columns: 8% 78%;
     -ms-grid-rows: 12% auto auto 20%;
         grid-template-rows: 12% auto auto 20%;
-        grid-template-areas: "logo navid"
- "logo haus"
- "logo article"
- "logo footer";
+        grid-template-areas: "logo navid" "logo haus" "logo article" "logo footer";
   }
-  nav {
-    word-spacing: 15px;
-  }
-  nav .look {
-    display: -ms-grid;
-    display: grid;
-    text-align: center;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
-  nav .navdrop {
-    background-color: rgba(255, 255, 255, 0.616);
-    border-radius: 5px;
-  }
-  nav ul {
-    text-align: center;
+  .dropbtn {
+    z-index: 0;
+    -webkit-box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.2);
     margin: 0;
-    padding: 5px;
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 10px;
-  }
-  nav ul:first-child {
-    text-align: center;
-    -webkit-animation: anim 1s ease;
-            animation: anim 1s ease;
-  }
-  @-webkit-keyframes anim {
-    0% {
-      margin-left: 0px;
-    }
-    50% {
-      margin-left: 100px;
-    }
-    80% {
-      margin-right: -20px;
-    }
-    100% {
-      margin-right: 0px;
-    }
-  }
-  @keyframes anim {
-    0% {
-      margin-left: 0px;
-    }
-    50% {
-      margin-left: 100px;
-    }
-    80% {
-      margin-right: -20px;
-    }
-    100% {
-      margin-right: 0px;
-    }
-  }
-  nav ul img {
-    margin-left: 25px;
-    width: 80px;
-    height: 80px;
-  }
-  nav ul li {
-    float: none;
-    color: white;
-    text-align: center;
-  }
-  nav ul li a {
     padding: 10px;
-    color: white;
-    text-decoration: none;
-    line-height: 30px;
-    font-size: 12px;
+    width: 100px;
+    color: black;
+    font-size: 5px;
+    border: none;
+    position: relative;
+    display: block;
+    cursor: pointer;
   }
-  nav ul li a:hover:first-child {
+  .dropbtn img {
+    display: block;
+    width: 100px;
+  }
+  .dropdown {
+    -webkit-animation: anim1 2s ease;
+            animation: anim1 2s ease;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, white), color-stop(10%, yellow));
     background-image: linear-gradient(white 90%, yellow 10%);
-    border-radius: 5px;
-    color: black;
-    -webkit-animation: anim4 1s forwards;
-            animation: anim4 1s forwards;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    padding: 0px;
+    position: relative;
+    display: inline-block;
   }
-  @-webkit-keyframes anim4 {
-    0% {
-      font-size: 12px;
-    }
-    20% {
-      font-size: 13px;
-    }
-    40% {
-      font-size: 14px;
-    }
-    60% {
-      font-size: 15px;
-    }
-    80% {
-      font-size: 14px;
-    }
-    90% {
-      font-size: 13px;
-    }
-    100% {
-      font-size: 12px;
-    }
-  }
-  @keyframes anim4 {
-    0% {
-      font-size: 12px;
-    }
-    20% {
-      font-size: 13px;
-    }
-    40% {
-      font-size: 14px;
-    }
-    60% {
-      font-size: 15px;
-    }
-    80% {
-      font-size: 14px;
-    }
-    90% {
-      font-size: 13px;
-    }
-    100% {
-      font-size: 12px;
-    }
-  }
-  nav ul li ul li {
+  .dropdown-content {
+    -webkit-animation: anim2 1s forwards;
+            animation: anim2 1s forwards;
+    margin: 0;
+    padding: 10px;
     display: none;
+    line-height: 15px;
+    position: absolute;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, white), color-stop(10%, yellow));
+    background-image: linear-gradient(white 90%, yellow 10%);
+    border-radius: 0px 0px 5px 5px;
+    min-width: 100px;
+    -webkit-box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
   }
-  nav ul li:hover:first-child ul li {
-    -webkit-animation: anim2 1s ease;
-            animation: anim2 1s ease;
+  .dropdown-content a {
+    float: none;
+    margin: 0px;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 10px;
+  }
+  .dropdown-content a:hover {
+    margin: 5px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.336);
+    border-radius: 5px;
+  }
+  .dropcheck {
+    margin: 0;
+    position: absolute;
+  }
+  .dropcheck:checked ~ .dropdown-content {
+    margin: 0;
     display: block;
   }
   @-webkit-keyframes anim2 {
     0% {
-      margin-left: 0px;
-    }
-    50% {
-      margin-left: 20px;
-    }
-    100% {
-      margin-right: 0px;
+      margin-top: -30px;
     }
   }
   @keyframes anim2 {
     0% {
-      margin-left: 0px;
-    }
-    50% {
-      margin-left: 20px;
-    }
-    100% {
-      margin-right: 0px;
+      margin-top: -30px;
     }
   }
-  nav a {
+  @-webkit-keyframes anim1 {
+    0% {
+      margin-left: -30%;
+    }
+  }
+  @keyframes anim1 {
+    0% {
+      margin-left: -30%;
+    }
+  }
+  a {
     font-size: 15px;
   }
-  nav img {
+  img {
     display: block;
     width: 50px;
   }
@@ -576,28 +442,6 @@ footer {
   }
   footer {
     margin-left: 20%;
-  }
-}
-
-@media screen and (max-width: 20em) {
-  body {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 10px;
-    -ms-grid-columns: 8% 30% 30% 20%;
-        grid-template-columns: 8% 30% 30% 20%;
-    -ms-grid-rows: 5% auto 20%;
-        grid-template-rows: 5% auto 20%;
-        grid-template-areas: "logo navid navid navid"
- "logo haus haus article"
- "logo haus haus article"
- "logo footer footer footer";
-  }
-  nav {
-    word-spacing: 15px;
-  }
-  nav a {
-    font-size: 18px;
   }
 }
 /*# sourceMappingURL=forsiða.css.map */
