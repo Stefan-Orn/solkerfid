@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot");
-  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  background-image: url(img/bakgrunnur.jpg);
+  background-image: url(../img/bakgrunnur.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -36,10 +36,7 @@ body {
       grid-template-columns: 10% 20% 35% 20% 10%;
   -ms-grid-rows: 15% auto 20%;
       grid-template-rows: 15% auto 20%;
-      grid-template-areas: "logo navid navid navid bil"
- "logo haus haus article bil"
- "logo haus haus article bil"
- "footer footer footer footer footer";
+      grid-template-areas: "logo navid navid navid bil" "logo haus haus article bil" "logo haus haus article bil" "logo aside aside aside bil" "logo form form form bil" "footer footer footer footer footer";
 }
 
 header {
@@ -195,7 +192,7 @@ header p {
 
 .logo {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
+  -ms-grid-row-span: 5;
   -ms-grid-column: 1;
   grid-area: logo;
   border: solid 1px;
@@ -221,7 +218,7 @@ header p {
 
 nav {
   padding: 10px;
-  background-image: url(img/space.jpg);
+  background-image: url(../img/space.jpg);
   border: solid 2px white;
   border-radius: 5px;
 }
@@ -250,7 +247,7 @@ nav img {
 }
 
 article {
-  background-image: url(img/space.jpg);
+  background-image: url(../img/space.jpg);
   color: white;
 }
 
@@ -275,6 +272,102 @@ article img {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(grey));
   background-image: linear-gradient(white, grey);
   padding: 5px;
+}
+
+table {
+  font-family: 'Raleway', sans-serif;
+  width: 100% auto;
+}
+
+table a {
+  text-decoration: none;
+}
+
+table a:hover {
+  color: red;
+}
+
+table th, table caption, table a {
+  color: white;
+  text-align: left;
+}
+
+table caption {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+table th, table td {
+  padding: 5px;
+}
+
+table tr:nth-child(even) {
+  background-image: url(../img/space.jpg);
+}
+
+table tr:nth-child(even) a {
+  padding: 2px;
+  background-color: rgba(255, 255, 255, 0.274);
+  color: black;
+  border-radius: 5px;
+}
+
+table tr:nth-child(even) a:hover {
+  color: red;
+}
+
+table, th, td {
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+
+.form {
+  font-family: 'Raleway', sans-serif;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  border: 1px solid white;
+  background-image: url(../img/space.jpg);
+  border-radius: 5px;
+}
+
+.form div {
+  margin: 10px;
+}
+
+.form label {
+  padding: 5px;
+}
+
+.form input {
+  padding: 2px;
+  outline: none;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+.form input:focus, .form textarea:focus {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 255, 0.788);
+          box-shadow: 0 0 10px rgba(0, 0, 255, 0.788);
+  border: 1px solid red;
+}
+
+.form .lal {
+  border: none;
+}
+
+.form textarea {
+  font-family: 'Raleway', sans-serif;
+  resize: vertical;
+  max-height: 100px;
+}
+
+.form button {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  background-color: black;
 }
 
 footer {
@@ -320,7 +413,7 @@ article {
 }
 
 footer {
-  -ms-grid-row: 4;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-area: footer;
@@ -328,9 +421,23 @@ footer {
 
 .bil {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
+  -ms-grid-row-span: 5;
   -ms-grid-column: 5;
   grid-area: bil;
+}
+
+aside {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: aside;
+}
+
+.form {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: form;
 }
 
 @media screen and (max-width: 40em) {
@@ -342,10 +449,7 @@ footer {
         grid-template-columns: 8% 78%;
     -ms-grid-rows: 12% auto auto 20%;
         grid-template-rows: 12% auto auto 20%;
-        grid-template-areas: "logo navid"
- "logo haus"
- "logo article"
- "logo footer";
+        grid-template-areas: "logo navid" "logo haus" "logo article" "logo aside" "logo form" "logo footer";
   }
   .dropbtn {
     z-index: 0;

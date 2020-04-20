@@ -40,6 +40,8 @@ body{
   "logo navid navid navid bil"
   "logo haus haus article bil"
   "logo haus haus article bil"
+  "logo aside aside aside bil"
+  "logo form form form bil"
   "footer footer footer footer footer";
 }
 
@@ -213,6 +215,88 @@ article{
   padding: 5px;
 }
 
+
+table{
+  font-family: 'Raleway', sans-serif;
+  width: 100% auto;
+  a{
+    text-decoration: none;
+  
+  }
+  a:hover{
+    color: red;
+  }
+  th, caption, a{
+    color: white;
+    text-align: left;
+  }
+  caption{
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  th,td{
+    padding: 5px;
+  }
+  tr:nth-child(even){
+    background-image: url(../img/space.jpg);
+    a{
+      padding: 2px;
+      background-color: rgba(255, 255, 255, 0.274);
+      color: black;
+      border-radius: 5px;
+    }
+    a:hover{
+      color: red;
+    }
+  }
+}
+
+table,th, td{
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+
+.form{
+  font-family: 'Raleway', sans-serif;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  border: 1px solid white;
+  background-image:url(../img/space.jpg);
+  border-radius: 5px;
+  div{
+    margin: 10px;
+  }
+  label{
+    padding: 5px;
+  }
+  input{
+    padding: 2px;
+    outline:none;
+    border: 1px solid blue;
+    border-radius: 5px;
+  }
+  input:focus, textarea:focus{
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.788);
+    border: 1px solid red;
+  }
+  .lal{
+    border: none;
+  }
+  textarea{
+    font-family: 'Raleway', sans-serif;
+    resize: vertical;
+    max-height: 100px;
+  }
+  button{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    background-color: black;
+  }
+}
+
 footer {
   margin-left: 10%;
   img{
@@ -247,6 +331,12 @@ footer{
 .bil{
   grid-area: bil;
 }
+aside{
+  grid-area: aside;
+}
+.form{
+  grid-area: form;
+}
 
 @media screen and (max-width: 40em){
   body{
@@ -258,6 +348,8 @@ footer{
     "logo navid"
     "logo haus"
     "logo article"
+    "logo aside"
+    "logo form"
     "logo footer";
   }
 
